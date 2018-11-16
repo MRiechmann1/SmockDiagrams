@@ -98,4 +98,64 @@
   <packagedElement xmi:type="uml:Association" xmi:id="_W3LiEOW_EeiHbNSSdY3B9A"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_YTE4UOW_EeiHbNSSdY3B9A"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_ZcG88OW_EeiHbNSSdY3B9A"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Dnu9QOmGEei9U5yEW2wp6A" name="ClassDiagram">
+    <packagedElement xmi:type="uml:Class" xmi:id="_LsIRgOmGEei9U5yEW2wp6A" name="ComputerManager">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_UwTnwOmGEei9U5yEW2wp6A" name="activeUser" visibility="private">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7okR0OmGEei9U5yEW2wp6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7on8MOmGEei9U5yEW2wp6A" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_z7AJMOmGEei9U5yEW2wp6A" name="userList" visibility="private" type="_MCEsUOmGEei9U5yEW2wp6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2S4mkOmGEei9U5yEW2wp6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2S_UQOmGEei9U5yEW2wp6A" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4_5mcOmGEei9U5yEW2wp6A" name="activeTags" visibility="private" type="_MMCgoOmGEei9U5yEW2wp6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_93BGYOmGEei9U5yEW2wp6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_93HNAOmGEei9U5yEW2wp6A" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KuUwAOmHEei9U5yEW2wp6A" name="reader" type="_MfF_gOmGEei9U5yEW2wp6A" association="_KuRFoOmHEei9U5yEW2wp6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KuaPkOmHEei9U5yEW2wp6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kud58OmHEei9U5yEW2wp6A" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_AZHPsOmHEei9U5yEW2wp6A" name="unlockComputer" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CdaCsOmHEei9U5yEW2wp6A" name="lockComputer" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_EnCosOmHEei9U5yEW2wp6A" name="manageComputer" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F4cmMOmHEei9U5yEW2wp6A" name="getNearTags" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IpaR8OmHEei9U5yEW2wp6A" name="registerUser" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MCEsUOmGEei9U5yEW2wp6A" name="User">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZBGukOmGEei9U5yEW2wp6A" name="username" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cOoagOmGEei9U5yEW2wp6A" name="password" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fmWkQOmGEei9U5yEW2wp6A" name="tag" visibility="private" type="_MMCgoOmGEei9U5yEW2wp6A"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_px05wOmGEei9U5yEW2wp6A" name="transponder" type="_MMCgoOmGEei9U5yEW2wp6A" association="_pxxPYOmGEei9U5yEW2wp6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_px3WAOmGEei9U5yEW2wp6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_px7AYOmGEei9U5yEW2wp6A" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MMCgoOmGEei9U5yEW2wp6A" name="Transponder">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_idCdgOmGEei9U5yEW2wp6A" name="uuid" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MfF_gOmGEei9U5yEW2wp6A" name="Reader">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_sIufsOmGEei9U5yEW2wp6A" name="getNearTags">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zA21IOmGEei9U5yEW2wp6A" type="_MMCgoOmGEei9U5yEW2wp6A" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pxxPYOmGEei9U5yEW2wp6A" memberEnd="_px05wOmGEei9U5yEW2wp6A _px-qwOmGEei9U5yEW2wp6A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pxzroOmGEei9U5yEW2wp6A" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pxzroemGEei9U5yEW2wp6A" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_px-qwOmGEei9U5yEW2wp6A" name="user" type="_MCEsUOmGEei9U5yEW2wp6A" association="_pxxPYOmGEei9U5yEW2wp6A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KuRFoOmHEei9U5yEW2wp6A" memberEnd="_KuUwAOmHEei9U5yEW2wp6A _KugWMOmHEei9U5yEW2wp6A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KuUI8OmHEei9U5yEW2wp6A" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KuUI8emHEei9U5yEW2wp6A" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_KugWMOmHEei9U5yEW2wp6A" name="computermanager" type="_LsIRgOmGEei9U5yEW2wp6A" association="_KuRFoOmHEei9U5yEW2wp6A"/>
+    </packagedElement>
+  </packagedElement>
 </uml:Model>
